@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <header>
+    <a href="{{ "/" | relURL }}" class="site-title">{{ .Site.Title }}</a>
+  </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <script src="{{ "/js/inline-expand.js" | relURL }}"></script>
+</body>
+</html>

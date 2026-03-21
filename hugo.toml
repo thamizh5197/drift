@@ -1,0 +1,9 @@
+baseURL = "https://thamizh5197.github.io/drift/"
+languageCode = "en-us"
+title = "Drift"
+
+[params]
+  description = "A digital garden"
+
+[outputs]
+  page = ["HTML", "JSON"]
