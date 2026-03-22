@@ -5,7 +5,7 @@
 </head>
 <body>
   <header>
-    <a href="{{ "/" | relURL }}" class="site-title">{{ .Site.Title }}</a>
+    <a href="{{ .Site.Home.RelPermalink }}" class="site-title">{{ .Site.Title }}</a>
   </header>
   <main>
     {{ block "main" . }}{{ end }}

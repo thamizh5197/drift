@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <a href="{{ "/" | relURL }}" class="back-link">← All articles</a>
+  <a href="{{ .Site.Home.RelPermalink }}" class="back-link">← All articles</a>
   <article>
     <header class="article-header">
       <h1 class="article-title">{{ .Title }}</h1>
