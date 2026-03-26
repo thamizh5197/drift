@@ -41,6 +41,9 @@
 
     e.preventDefault();
 
+    // Use the fully resolved URL so relative paths work on any subpath deployment
+    const resolvedUrl = link.href;
+
     // Toggle existing expansion
     const existing = link.parentElement.nextElementSibling;
     if (existing && existing.classList.contains('inline-expansion')) {
@@ -49,7 +52,7 @@
     }
 
     // Fetch JSON for the linked article
-    const jsonUrl = href.replace(/\/$/, '') + '/index.json';
+    const jsonUrl = resolvedUrl.replace(/\/$/, '') + '/index.json';
 
     try {
       const response = await fetch(jsonUrl);
@@ -73,7 +76,7 @@
       });
     } catch (_) {
       // Fall back to normal navigation
-      window.location.href = href;
+      window.location.href = resolvedUrl;
     }
   });
 
