@@ -75,15 +75,20 @@ main {
 }
 
 .theme-btn {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 0.7rem;
-  padding: 0.15rem 0.5rem;
+  font-size: 0.85rem;
+  width: 1.6rem;
+  height: 1.6rem;
   border: 1px solid var(--border);
   background: none;
   cursor: pointer;
   color: var(--muted);
-  border-radius: 2px;
-  transition: all 0.1s;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  padding: 0;
+  line-height: 1;
 }
 
 .theme-btn:hover {
