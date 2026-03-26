@@ -36,8 +36,8 @@
     if (!link) return;
 
     const href = link.getAttribute('href');
-    // Only handle internal /articles/ links
-    if (!href || !href.match(/^\/articles\/[^/]+\/?$/)) return;
+    // Only handle internal article links (absolute /articles/slug/ or relative ../slug/)
+    if (!href || !href.match(/^(\/articles\/[^/]+|\.\.\/[^/]+)\/?$/)) return;
 
     e.preventDefault();
 
