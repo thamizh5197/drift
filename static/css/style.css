@@ -1,10 +1,27 @@
+/* ── Themes ── */
 :root {
+  --text: #c8c8c8;
+  --muted: #808080;
+  --bg: #323232;
+  --border: #444;
+  --expansion-bg: #2a2a2a;
+  --max-width: 680px;
+}
+
+[data-theme="light"] {
   --text: #1a1a1a;
   --muted: #777;
   --bg: #fafafa;
   --border: #e0e0e0;
   --expansion-bg: #f4f4f4;
-  --max-width: 680px;
+}
+
+[data-theme="dark"] {
+  --text: #e0e0e0;
+  --muted: #555;
+  --bg: #111;
+  --border: #222;
+  --expansion-bg: #1a1a1a;
 }
 
 *, *::before, *::after {
@@ -29,6 +46,9 @@ header {
   padding: 2.5rem 1.5rem 1rem;
   max-width: var(--max-width);
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 main {
@@ -46,6 +66,35 @@ main {
   text-transform: uppercase;
   color: var(--text);
   text-decoration: none;
+}
+
+/* Theme switcher */
+.theme-switcher {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.theme-btn {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--border);
+  background: none;
+  cursor: pointer;
+  color: var(--muted);
+  border-radius: 2px;
+  transition: all 0.1s;
+}
+
+.theme-btn:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.theme-btn.active {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
 }
 
 /* Tag filters */
